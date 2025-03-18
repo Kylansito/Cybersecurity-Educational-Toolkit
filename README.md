@@ -18,7 +18,7 @@ All tools in this repository are provided strictly for:
 
 ## Repository Contents
 
-### 1. Fake Hotspot (`fake-hotspot.py`)
+### 1. Fake Hotspot
 A demonstration tool that simulates a malicious WiFi captive portal mimicking Google's login page. Shows how attackers can create convincing fake access points to harvest credentials.
 
 **Features:**
@@ -27,7 +27,10 @@ A demonstration tool that simulates a malicious WiFi captive portal mimicking Go
 - Includes clear warning banners indicating it's a demo
 - Instructor view for demonstration purposes
 
-### 2. Brute Force (`brute-force.py`)
+### 2. Brute Force
+This folder contains tools related to password attacks and generation:
+
+#### Brute Force Tool (`brute-force.py`)
 An educational demonstration of brute force password cracking techniques. Helps understand the importance of strong passwords and modern authentication protections.
 
 **Features:**
@@ -36,16 +39,7 @@ An educational demonstration of brute force password cracking techniques. Helps 
 - Performance metrics display
 - Support for various hash algorithms
 
-### 3. Social Engineering (`social-engineering.py`)
-A toolkit demonstrating Catalan-focused OSINT (Open Source Intelligence) gathering techniques and targeted phishing campaign generation. Illustrates how attackers craft region-specific attacks.
-
-**Features:**
-- OSINT collection for Catalan targets
-- Phishing email template generation
-- Multiple attack vector demonstrations
-- Educational component explaining detection and prevention
-
-### 4. CUPP Generator (`cupp-generator.py`)
+#### CUPP Generator (`cupp-generator.py`)
 Common User Passwords Profiler - A tool that generates potential password lists based on target information. Demonstrates how personal information can be used to crack passwords.
 
 **Features:**
@@ -54,7 +48,19 @@ Common User Passwords Profiler - A tool that generates potential password lists 
 - Multiple variation techniques
 - Leetspeak transformations
 
-### 5. Phishing Website (`phishing-website.py`)
+### 3. Social Engineering
+This folder contains social engineering attack demonstrations:
+
+#### OSINT and Targeted Phishing (`social-engineering.py`)
+A toolkit demonstrating Catalan-focused OSINT (Open Source Intelligence) gathering techniques and targeted phishing campaign generation. Illustrates how attackers craft region-specific attacks.
+
+**Features:**
+- OSINT collection for Catalan targets
+- Phishing email template generation
+- Multiple attack vector demonstrations
+- Educational component explaining detection and prevention
+
+#### Phishing Website (`phishing-website.py`)
 A Flask-based web application demonstrating a fake banking portal. Includes educational components explaining phishing techniques and protective measures.
 
 **Features:**
@@ -93,19 +99,7 @@ For those using this toolkit in educational settings, consider supplementing wit
 This project is currently under active development. I am continually working to improve existing tools and add new demonstrations to create a more comprehensive educational toolkit. 
 
 Planned future additions include:
-- Network traffic analysis tools
-- API security testing demonstrations
-- Web application vulnerability scanners
-- Secure coding practice examples
-- More detailed defensive countermeasures
-
-## Contributing
-
-Contributions focused on improving the educational value and safety of these demonstrations are welcome. Please ensure any contributions:
-- Maintain or enhance warning systems
-- Include educational components
-- Have clear documentation
-- Are focused on learning, not exploitation
+- SQL Injection
 
 ## License
 

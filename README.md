@@ -98,9 +98,6 @@ For those using this toolkit in educational settings, consider supplementing wit
 
 This project is currently under active development. I am continually working to improve existing tools and add new demonstrations to create a more comprehensive educational toolkit. 
 
-Planned future additions include:
-- SQL Injection
-
 ## License
 
 These tools are provided for educational purposes only. Use responsibly.

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="5;url=https://www.google.com">
+    <title>Connected Successfully</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 500px;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .success-icon {
+            font-size: 64px;
+            color: #0F9D58;
+            margin-bottom: 24px;
+        }
+        h1 {
+            color: #202124;
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+        p {
+            color: #5f6368;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .warning {
+            background-color: #ffdddd;
+            border-left: 6px solid #f44336;
+            padding: 16px;
+            margin: 20px 0;
+            text-align: left;
+            font-size: 14px;
+        }
+        .warning-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ff5252;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="warning-banner">
+        EDUCATIONAL DEMO: This is a simulation of a phishing attack for cybersecurity education
+    </div>
+    
+    <div class="container">
+        <div class="success-icon">✓</div>
+        <h1>Connected Successfully!</h1>
+        <p>You're now signed in and connected to the WiFi network.</p>
+        <p>You will be redirected in a few seconds...</p>
+        
+        <div class="warning">
+            <strong>EDUCATIONAL DEMO:</strong> In a real phishing attack, your credentials would now be 
+            in the hands of an attacker. Always verify the legitimacy of WiFi networks and login pages 
+            before entering your credentials.
+        </div>
+    </div>
+</body>
+</html>

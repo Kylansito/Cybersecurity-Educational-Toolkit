@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaixaBank - Iniciar sessió</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+        }
+        
+        .warning-banner {
+            background-color: #ff4c4c;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            width: 180px;
+        }
+        
+        .nav {
+            display: flex;
+        }
+        
+        .nav-item {
+            margin-left: 20px;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .login-box {
+            flex: 1;
+            min-width: 350px;
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .info-box {
+            flex: 1;
+            min-width: 350px;
+            background-color: #007AC2;
+            color: white;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .info-box h1 {
+            color: white;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        button {
+            background-color: #007AC2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        button:hover {
+            background-color: #005a8e;
+        }
+        
+        .forgot-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #007AC2;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .info-list {
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+        
+        .info-list li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #777;
+            font-size: 12px;
+        }
+        
+        .footer a {
+            color: #007AC2;
+            text-decoration: none;
+        }
+        
+        .security-badge {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            border: 1px solid #eee;
+        }
+        
+        .security-badge span {
+            margin-left: 10px;
+            font-size: 12px;
+            color: #777;
+        }
+        
+        .lock-icon {
+            color: #007AC2;
+            font-size: 18px;
+        }
+        
+        @media (max-width: 768px) {
+            .main {
+                flex-direction: column;
+            }
+            
+            .nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="warning-banner">
+        EINA EDUCATIVA - NO INTRODUÏU CREDENCIALS REALS - DEMOSTRACIÓ DE SEGURETAT
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <img src="/static/logo.png" alt="CaixaBank" class="logo">
+            <div class="nav">
+                <a href="#" class="nav-item">Particulars</a>
+                <a href="#" class="nav-item">Empreses</a>
+                <a href="#" class="nav-item">Banca Privada</a>
+                <a href="#" class="nav-item">Informació Corporativa</a>
+            </div>
+        </div>
+        
+        <div class="main">
+            <div class="login-box">
+                <h1>Accés a CaixaBankNow</h1>
+                <form id="login-form" action="/login" method="post">
+                    <div class="form-group">
+                        <label for="username">Identificador (NIF/NIE/Passaport)</label>
+                        <input type="text" id="username" name="username" placeholder="Introduïu el vostre identificador" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Contrasenya d'accés</label>
+                        <input type="password" id="password" name="password" placeholder="Introduïu la vostra contrasenya" required>
+                    </div>
+                    
+                    <button type="submit">Iniciar sessió</button>
+                    
+                    <a href="#" class="forgot-link">He oblidat la meva contrasenya</a>
+                    
+                    <div class="security-badge">
+                        <span class="lock-icon">🔒</span>
+                        <span>Connexió segura. Les teves dades viatgen xifrades.</span>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="info-box">
+                <h1>Mesures de seguretat importants</h1>
+                <p>Recorda que CaixaBank mai et demanarà:</p>
+                <ul class="info-list">
+                    <li>Les teves claus completes de CaixaBankNow per telèfon, SMS o correu electrònic</li>
+                    <li>Codis de confirmació d'operacions que no hagis sol·licitat</li>
+                    <li>Informació personal sensible per realitzar gestions</li>
+                </ul>
+                <p style="margin-top: 20px;">Consulta les nostres recomanacions de seguretat per protegir els teus comptes i accedir als serveis de CaixaBank de manera segura.</p>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p>© CaixaBank, S.A. Tots els drets reservats.</p>
+                <p>Av. Diagonal, 621, 08028 Barcelona</p>
+                <p><a href="#">Política de privacitat</a> | <a href="#">Avís legal</a> | <a href="#">Cookies</a></p>
+                <p style="margin-top: 10px; color: #ff4c4c; font-weight: bold;">
+                    AQUESTA ÉS UNA SIMULACIÓ DE CIBERATAC AMB FINALITATS EDUCATIVES
+                </p>
+            </div>
+        </div>
+    </body>
+    </html>

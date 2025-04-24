@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administració Demo Phishing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #777;
+            font-size: 16px;
+        }
+        
+        .warning-banner {
+            background-color: #ff4c4c;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .no-data {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            color: #777;
+        }
+        
+        .button {
+            display: inline-block;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        
+        .button.red {
+            background-color: #f44336;
+        }
+        
+        .qr-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .qr-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .qr-image {
+            max-width: 250px;
+            border: 1px solid #ddd;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Administració de la Demo de Phishing</h1>
+            <p class="subtitle">Aquesta pàgina és només per a l'instructor de la sessió de ciberseguretat</p>
+        </header>
+        
+        <div class="warning-banner">
+            AQUESTA INFORMACIÓ ÉS TEMPORAL I S'ELIMINARÀ EN ACABAR LA DEMOSTRACIÓ
+        </div>
+        
+        <h2>Resultats de la Simulació</h2>
+        
+        {% if captured_data %}
+        <table>
+            <tr>
+                <th>Identificador</th>
+                <th>Contrasenya</th>
+                <th>Data i Hora</th>
+                <th>Adreça IP</th>
+            </tr>
+            {% for entry in captured_data %}
+            <tr>
+                <td>{{ entry.username }}</td>
+                <td>{{ entry.password }}</td>
+                <td>{{ entry.timestamp }}</td>
+                <td>{{ entry.ip }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/admin/clear" class="button red">Esborrar totes les dades</a>
+        {% else %}
+        <div class="no-data">
+            <p>Encara no hi ha dades capturades en aquesta simulació.</p>
+        </div>
+        {% endif %}
+        
+        <div class="qr-section">
+            <h2>Codi QR per compartir</h2>
+            <p>Comparteix aquest codi QR amb els participants per accedir a la simulació:</p>
+            <div class="qr-container">
+                <img src="{{ url_for('static', filename='qr_code.png') }}" alt="QR Code" class="qr-image">
+            </div>
+            <p>URL de la demostració: <strong>{{ demo_url }}</strong></p>
+        </div>
+        
+        <div class="footer">
+            <p>Eina educativa de ciberseguretat - Només per a fins demostratius</p>
+            <a href="/" class="button">Tornar a l'inici</a>
+        </div>
+    </div>
+</body>
+</html>

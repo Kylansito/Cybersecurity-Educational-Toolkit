@@ -1,0 +1,1 @@
+This is sample content for important_document.txt. In a real scenario, this would be your actual file content.
